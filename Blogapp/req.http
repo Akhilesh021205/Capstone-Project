@@ -1,0 +1,99 @@
+### User Register
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "firstName": "Anuragg",
+  "lastName": "Sharma",
+  "email": "anuraag.user@example.com",
+  "password": "User@12345",
+  "profileImageUrl": "https://example.com/avatars/user.png"
+}
+
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "Vikaas",
+  "lastName": "Author",
+  "email": "vikkas.author@example.com",
+  "password": "Author@12345",
+  "profileImageUrl": "https://example.com/avatars/author.png"
+}
+
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "test",
+  "lastName": "Author",
+  "email": "test.author@example.com",
+  "password": "testauthor",
+  "profileImageUrl": "https://example.com/avatars/author.png"
+}
+
+### Author Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email":"admin1@gmail.com",
+  "password":"admin"
+}
+
+
+
+### Create article (AUTHOR)
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"698ac6bea00436cd57908829",
+  "title":"test2 article",
+  "category":"programming",
+  "content":"content of test2 article"
+}
+
+
+
+###Read articles of a author
+GET http://localhost:4000/author-api/articles/698ac6c1a00436cd5790882b
+
+
+
+### Update article (AUTHOR)
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"698ac6bea00436cd57908829",
+  "articleId":"698ac736a00436cd57908832",
+  "title":"test2 article updated",
+  "category":"programming",
+  "content":"content of test2 article updated"
+}
+
+
+
+### Logout
+GET http://localhost:4000/common-api/logout
+
+### Block user (ADMIN)
+GET http://localhost:4000/admin-api/users/698ac6c1a00436cd5790882b
+
+###change the password
+PUT http://localhost:4000/common-api/change-password
+Content-Type: application/json
+
+{
+  "email":"admin2@gmail.com",
+  "currentPassword":"admin",
+  "newPassword":"admin2"
+}
+
+
+
